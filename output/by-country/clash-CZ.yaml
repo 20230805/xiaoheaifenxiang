@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: 4911ec85-501b-4841-92d5-fbf9d942faf4
+  type: ss
+  server: 194.87.233.93
+  port: 46190
+  cipher: chacha20-ietf-poly1305
+  password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fast-route-279ca1-gw.staging-api-c694f6.workers.dev
-  network: ws
-  ws-opts:
-    path: /3c7d135ea6a9e966?ed=2560
-    headers:
-      Host: fast-route-279ca1-gw.staging-api-c694f6.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
