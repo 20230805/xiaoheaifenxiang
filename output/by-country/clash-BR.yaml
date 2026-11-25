@@ -14,7 +14,7 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: None
+  servername: ''
 - name: 🇧🇷 BR 02 - xiaohe
   type: vmess
   server: 103.14.27.207
