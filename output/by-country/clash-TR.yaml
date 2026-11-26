@@ -6,29 +6,59 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   type: vless
-  server: 172.64.155.209
+  server: v2new.nimbaha9.ir
+  port: 8080
+  uuid: f279c19a-b324-40cf-af57-049f9b1b68f2
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /XDS45
+    headers:
+      Host: v2new.nimbaha9.ir
+- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  type: vless
+  server: 172.67.199.12
   port: 443
-  uuid: 14eccb4f-ca88-4732-b191-d8daacf63448
+  uuid: 963A4918-A630-29DA-A873-093CDF8AD784
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: sinavm3.soft10.ir
+  servername: still-bar-5702.vpnetwork3567.workers.dev
   network: ws
   ws-opts:
-    path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM
+    path: /
     headers:
-      Host: sinavm3.soft10.ir
+      Host: still-bar-5702.vpnetwork3567.workers.dev
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  type: vless
+  server: raha.ertebatgoostar.ir
+  port: 80
+  uuid: 8c49bed5-dbb2-4c0d-a2f1-2577b12c6c66
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 rules:
 - MATCH,PROXIES
